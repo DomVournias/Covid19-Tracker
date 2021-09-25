@@ -1,0 +1,16 @@
+.map {
+  height: 400px;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 1rem;
+  background-color: #24242d;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: 0.5rem;
+}
+
+.map .leaflet-container {
+  height: 100%;
+}

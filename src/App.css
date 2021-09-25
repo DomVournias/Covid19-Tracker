@@ -1,38 +1,264 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #16171d;
+}
+
+.app__container {
+  text-align: -webkit-center;
+}
+
+.app {
+  background-color: #16171d;
+  color: white;
+  max-width: 80rem;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 0, 0, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+.app__header {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.app__navbar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background-color: #16171d;
+  margin: 1rem;
+}
+
+.app_data {
+  place-self: start;
+  grid-column: span 2 / span 2;
+}
+
+.app_dropdown {
+  place-self: end;
+  grid-column: span 2 / span 1;
+}
+
+.app__dateCard {
+  background-color: #24242d;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 0.25rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.app__stats {
+  display: flex;
+  flex-wrap: flex;
+  width: 100%;
+}
+
+.app__cards {
+  display: flex;
+}
+
+.app__infoCard {
+  position: relative;
+  text-align: center;
+
+  background-color: #24242d;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 100%;
+}
+
+.app__infoCard h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  padding-bottom: 6px;
+}
+
+.app__infoCard h4 {
+  padding-bottom: 10px;
+}
+
+.app__infoBadge {
+  position: absolute;
+  bottom: -20px;
+  left: 90px;
+  right: 90px;
+  border-radius: 40px;
+  background-color: #2f2f3b;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+}
+
+.app__infoBadge h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.confirmedColor {
+  color: #feb85c;
+}
+.deathsColor {
+  color: #ed786b;
+}
+.vaccinatedColor {
+  color: #1f86c0;
+}
+.recoveredColor {
+  color: #1fc0a9;
+}
+.positiveColor {
+  color: #48aa3e;
+}
+.negativeColor {
+  color: #e02435;
+}
+
+.app__dropDown {
+  background-color: #24242d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded {
+  background: rgba(12, 13, 16, 0.35);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 0.375rem;
+  max-height: 25rem;
+  color: white;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MuiPaper-root.MuiMenu-paper.MuiPopover-paper.MuiPaper-elevation8.MuiPaper-rounded {
+  background-color: none;
+}
+
+.MuiSelect-outlined.MuiSelect-outlined {
+  padding-right: 32px;
+  padding-left: 22px;
+  color: white;
+  border-radius: 0.375rem;
+}
+
+.MuiSvgIcon-root.MuiSelect-icon.MuiSelect-iconOutlined {
+  color: white;
+}
+
+.MuiSelect-nativeInput {
+  outline-color: white;
+}
+
+.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button:hover {
+  background-color: rgba(12, 13, 16, 0.55);
+}
+
+.MuiFormControl-root.app__dropDown {
+  border-radius: 14px;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.Mui-focused.Mui-focused.MuiInputBase-formControl {
+  border-radius: 14px;
+}
+
+.table {
+  color: white;
+  width: 50%;
+  text-align: left;
+  background-color: #24242d;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  height: 400px;
+  margin: 1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table td {
+  padding: 0.5rem;
+}
+
+.tableAndMap {
+  display: flex;
+}
+
+.table tr:nth-of-type(odd) {
+  background-color: #2a2a35;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  row-gap: 1.5rem;
+}
+
+.firstChart,
+.secondChart {
+  background-color: #24242d;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.75rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
