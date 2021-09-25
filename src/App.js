@@ -82,7 +82,7 @@ function App() {
           <h2>Covid 19</h2>
         </div>
         <div className="app__navbar">
-          <div className="app__date">
+          <div className="app_date">
             <Date />
           </div>
           <div className="app_dropdown">

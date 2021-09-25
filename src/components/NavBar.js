@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import DateRangeIcon from "@mui/icons-material/DateRange";
 
 const Date = () => {
   const [loading, setLoading] = useState(false);
@@ -26,8 +27,11 @@ const Date = () => {
   }, []);
 
   return (
-    <div className="app__dateCard">
-      <h3 className="date">Τελευταία ενημέρωση: {casesDate}</h3>
+    <div className="dateCard">
+      <span>
+        <DateRangeIcon />
+      </span>
+      &nbsp; Τελευταία ενημέρωση: {casesDate}
     </div>
   );
 };

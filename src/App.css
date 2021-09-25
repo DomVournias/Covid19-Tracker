@@ -65,25 +65,29 @@ h2 {
   margin: 1rem;
 }
 
-.app_data {
-  place-self: start;
-  grid-column: span 2 / span 2;
-}
-
 .app_dropdown {
   place-self: end;
   grid-column: span 2 / span 1;
 }
 
-.app__dateCard {
-  background-color: #24242d;
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+.app_date {
+  width: 23em;
+}
+
+.dateCard {
+  display: flex;
+  align-items: center;
+  grid-column: span 2 / span 2;
+  vertical-align: middle;
+  text-align: left;
   border-radius: 0.25rem;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 25px;
   padding-right: 25px;
+  background-color: #24242d;
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .app__stats {
