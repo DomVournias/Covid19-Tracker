@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { FormControl, Select, MenuItem } from "@material-ui/core";
 import StatsCards from "./components/StatsCards";
 import Table from "./components/Table";
 import { sortAreas } from "./components/util";
@@ -8,19 +7,18 @@ import ConfirmedChart from "./components/ComfirmedChart";
 import DeathsChart from "./components/DeathsChart";
 import Map from "./components/Map";
 import "leaflet/dist/leaflet.css";
-import { map } from "leaflet";
-import numeral from "numeral";
+import Footer from "./components/Footer";
+
 import Date from "./components/NavBar";
 
 function App() {
   const [areas, setAreas] = useState([]);
-  const [region, setRegion] = useState("ΕΛΛΑΔΑ");
+
   const [areasInfo, setAreasInfo] = useState({});
   const [tableData, setTableData] = useState([]);
   const [mapCenter, setMapCenter] = useState({ lat: 38.307, lng: 24.423 });
   const [mapZoom, setMapZoom] = useState(6);
   const [mapAreas, setMapAreas] = useState([]);
-  const [casesType, setCasesType] = useState("cases");
 
   useEffect(() => {
     fetch("https://covid-19-greece.herokuapp.com/regions-history")
@@ -56,24 +54,6 @@ function App() {
 
   console.log(areas);
 
-  const onRegionChange = async (event) => {
-    const regionCode = event.target.value;
-
-    const url =
-      regionCode === "ΕΛΛΑΔΑ"
-        ? "https://covid-19-greece.herokuapp.com/all"
-        : `https://covid-19-greece.herokuapp.com/regions-history`;
-
-    await fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        setRegion(regionCode);
-        setAreasInfo(data);
-        setMapCenter([areas.areasInfo.latitude, areas.areasInfo.long]);
-        console.log(setMapCenter);
-      });
-  };
-
   return (
     <section className="app__container">
       <div className="app">
@@ -84,20 +64,6 @@ function App() {
         <div className="app__navbar">
           <div className="app_date">
             <Date />
-          </div>
-          <div className="app_dropdown">
-            <FormControl className="app__dropDown">
-              <Select
-                variant="outlined"
-                value={region}
-                onChange={onRegionChange}
-              >
-                <MenuItem value="ΕΛΛΑΔΑ">ΕΛΛΑΔΑ</MenuItem>
-                {areas.map((area) => (
-                  <MenuItem value={area.value}>{area.name}</MenuItem>
-                ))}
-              </Select>
-            </FormControl>
           </div>
         </div>
         <StatsCards />
@@ -115,6 +81,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

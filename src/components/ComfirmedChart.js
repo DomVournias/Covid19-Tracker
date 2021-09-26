@@ -18,8 +18,8 @@ const ConfirmedChart = () => {
         }
 
         var count = res.data.cases.length;
-        var lastThirtyDates = conDate.slice(Math.max(count - 7, 0));
-        var lastThirtyRates = conRate.slice(Math.max(count - 7, 0));
+        var lastThirtyDates = conDate.slice(Math.max(count - 30, 0));
+        var lastThirtyRates = conRate.slice(Math.max(count - 30, 0));
 
         setChartData({
           labels: lastThirtyDates,
@@ -27,12 +27,12 @@ const ConfirmedChart = () => {
             {
               label: "Κρούσματα",
               data: lastThirtyRates,
-              backgroundColor: "rgba(144, 51, 204, 0.1)",
-              color: "#9033CC",
-              borderWidth: 1,
-              borderColor: "#9033CC",
+              backgroundColor: "rgba(254, 184, 92, 0.4)",
+              color: "#feb85c",
+              borderWidth: 3,
+              borderColor: "#feb85c",
               fill: true,
-              pointBackgroundColor: "rgba(144, 51, 204, 1)",
+              pointBackgroundColor: "rgba(144, 51, 204, 0)",
               pointBorderWidth: 0,
             },
           ],

@@ -90,14 +90,102 @@ h2 {
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.app__stats {
+.card-row {
   display: flex;
-  flex-wrap: flex;
-  width: 100%;
+  flex-wrap: wrap;
 }
 
-.app__cards {
-  display: flex;
+.card-column {
+  flex: 25%;
+  padding: 15px;
+}
+
+@media screen and (min-width: 320px) {
+  .card-column {
+    flex: 20%;
+  }
+  .tableAndMap {
+    flex-wrap: wrap;
+  }
+  .table {
+    flex: 100%;
+  }
+  .map {
+    flex: 100%;
+  }
+  .charts {
+    flex-wrap: wrap;
+  }
+  .firstChart {
+    flex: 50%;
+    width: 50%;
+  }
+  .secondChart {
+    flex: 50%;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .card-column {
+    flex: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-column {
+    flex: 30%;
+  }
+  .tableAndMap {
+    flex-direction: row;
+  }
+  .table {
+    flex: 30%;
+  }
+  .map {
+    flex: 40%;
+  }
+  .charts {
+    flex-wrap: wrap;
+  }
+  .firstChart {
+    flex: 35%;
+    width: 20%;
+  }
+  .secondChart {
+    flex: 35%;
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 834px) {
+  .card-column {
+    flex: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-column {
+    flex: 20%;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .card-column {
+    flex: 20%;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .card-column {
+    flex: 20%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .card-column {
+    flex: 20%;
+  }
 }
 
 .app__infoCard {
@@ -111,8 +199,6 @@ h2 {
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   border-radius: 0.5rem;
   padding: 1.5rem;
-  margin: 1rem;
-  width: 100%;
 }
 
 .app__infoCard h3 {
@@ -128,9 +214,11 @@ h2 {
 
 .app__infoBadge {
   position: absolute;
-  bottom: -20px;
-  left: 90px;
-  right: 90px;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  bottom: -35px;
+  left: 50%;
+  right: 50%;
   border-radius: 40px;
   background-color: #2f2f3b;
   text-align: center;
@@ -230,7 +318,10 @@ h2 {
   overflow: scroll;
   overflow-x: hidden;
 }
-
+.table h5 {
+  padding-bottom: 1rem;
+  text-align: center;
+}
 .table tr {
   display: flex;
   justify-content: space-between;
@@ -249,9 +340,8 @@ h2 {
 }
 
 .charts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-
+  display: flex;
+  margin-top: 15px;
   row-gap: 1.5rem;
 }
 
@@ -265,4 +355,10 @@ h2 {
   border-radius: 0.75rem;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.app__footer {
+  color: gray;
+  padding-top: 6em;
+  padding-bottom: 2em;
 }

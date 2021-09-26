@@ -97,9 +97,9 @@ const StatsCards = () => {
   }, []);
 
   return (
-    <div className="app__cards">
+    <div className="card-row">
       {boxes.map((box) => (
-        <div className="app__stats">
+        <div className="card-column">
           <InfoCard
             stat={box.cases}
             title={box.name}
