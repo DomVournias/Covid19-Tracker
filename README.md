@@ -3,6 +3,7 @@ This is a personal project. A web application that shows the regional Covid Case
 
 You can check the `Full case study` <a href="https://domvournias.com/projects/Covid-19-Tracker">here</a>.
 </br>
+</br>
 <div align="left">
 <img width="60%" height = "60%" src="https://i.ibb.co/B3G0n7r/covid19-App.jpg" alt="cover" />
 </div>
