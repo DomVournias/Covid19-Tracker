@@ -1,7 +1,7 @@
 ## Covid-19 Tracker
 This is a personal project. A web application that shows the regional Covid Cases of Greece. The data was taken from the <a href="https://github.com/Covid-19-Response-Greece/covid19-greece-api">Covid-19 Response Greece API</a>. I built it to improve my API implementation skills. 
 
-<div align="center">
+<div align="left">
 <img width="60%" height = "60%" src="https://i.ibb.co/B3G0n7r/covid19-App.jpg" alt="cover" />
 </div>
 
