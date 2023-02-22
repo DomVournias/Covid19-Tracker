@@ -23,7 +23,6 @@ A web application that shows the regional Covid Cases of Greece. The data was ta
 	- Firebase
 	- Leaflet
 	- Numeral
-	- Leaflet
 	- Chartsjs 2
 
 
